@@ -223,11 +223,12 @@ extension ProgressHUD {
 
 // MARK: - Window
 extension ProgressHUD {
-
-	func setupWindow() {
-		if (main == nil) {
-			main = UIApplication.shared.windows.first
-		}
+    public func setupWindow(window: UIWindow? = nil) {
+        if let window {
+            main = window
+        } else if window == nil && main == nil {
+            main = UIApplication.shared.windows.first
+        }
 	}
 }
 
