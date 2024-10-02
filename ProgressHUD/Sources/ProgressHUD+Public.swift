@@ -125,6 +125,15 @@ public extension ProgressHUD {
 	}
 }
 
+// MARK: - Setup
+public extension ProgressHUD {
+    class func setupWindow(window: UIWindow) {
+        DispatchQueue.main.async {
+            shared.setupWindow(window: window)
+        }
+    }
+}
+
 // MARK: - Progress
 public extension ProgressHUD {
 

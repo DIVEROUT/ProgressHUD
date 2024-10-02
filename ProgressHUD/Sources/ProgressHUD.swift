@@ -223,7 +223,7 @@ extension ProgressHUD {
 
 // MARK: - Window
 extension ProgressHUD {
-    public func setupWindow(window: UIWindow? = nil) {
+    func setupWindow(window: UIWindow? = nil) {
         if let window {
             main = window
         } else if window == nil && main == nil {
